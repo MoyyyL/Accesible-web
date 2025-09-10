@@ -1,0 +1,219 @@
+/** GENERAL -------------------*/
+
+body {
+  margin: 0;
+}
+
+img {
+  max-inline-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/** PRESENTATION -----------------*/
+
+main, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  font-size: clamp(1rem, 4dvw, 24px);
+}
+
+.presentation {
+  width: 80dvw;
+}
+
+.presentation__image {
+  width: 100%;
+  position: relative;
+}
+
+.presentation__image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.presentation__description {
+  display: flex;
+  flex-direction: column;
+}
+
+.presentation__description h2 {
+  margin: 0;
+}
+
+.description__links, .footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.description__links a, .footer__links a {
+  width: 31px
+}
+
+h1 {
+  margin: 0;
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+}
+
+/** Portfolio ----------------------------------------------------*/
+
+.portfolio {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /*! change in media query to 1.5rem when upscaling*/
+  justify-content: center;
+}
+
+.portfolio__title {
+  margin: 1rem;
+}
+
+.portfolio__item {
+  background-color: pink;
+  border-radius: 1rem;
+}
+
+.portfolio__item {
+  width: fit-content;
+}
+
+.portfolio__item img {
+  /*! add a media query to width when page getting wider*/
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.item__image {
+  position: relative;
+}
+
+.image__layout {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0000006d, #00000000);
+  border-radius: 1rem;
+}
+
+.portfolio__item h3 {
+  margin: 0;
+}
+
+.item__description {
+  padding: 1rem;
+}
+
+/** FOOTER ---------------------------------------*/
+
+footer {
+  background-color: pink;
+  width: 100%;
+  margin: 0;
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.footer__content p {
+  margin: 0;
+}
+
+.footer__links a {
+  margin-top: 10px;
+}
+
+/** MEDIA QUERIESS ---------------------------------*/
+
+/*tablet*/
+@media (min-width: 650px) {
+  .presentation__image {
+    float: left;
+    width: 30dvw;
+    height: 30dvw;
+    margin-right: 1rem;
+  }
+
+  .presentation__image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .presentation__description {
+    display: block;
+    position: relative;
+  }
+
+  .description__links {
+    justify-content: end;
+  }
+
+  .description__links a {
+    width: 40px;
+  }
+
+  h1 {
+    width: fit-content;
+    height: fit-content;
+    top: 0;
+    left: 70%;
+
+    color: red;
+  }
+
+  .presentation__description h2{
+    margin-top: 3rem;
+  }
+
+  /** portfolio queries ------------*/
+  .portfolio {
+    gap: 1.5rem;
+  }
+
+  .portfolio__item {
+    width: 45dvw;
+  }
+
+  .portfolio__item img {
+    width: 100%;
+  }
+
+  /** FOOTER Queries*/
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+  }
+
+  .footer__image {
+    width: 50%;
+    margin: 1.5rem;
+    border-radius: 2rem;
+  }
+}
